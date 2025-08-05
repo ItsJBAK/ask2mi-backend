@@ -12,7 +12,7 @@ const auth = new google.auth.GoogleAuth({
   scopes: ['https://www.googleapis.com/auth/spreadsheets'],
 });
 
-const SHEET_ID = 'your-sheet-id-here'; // Get from sheet URL
+const SHEET_ID = process.env.SHEET_ID;
 
 app.get('/health', (req, res) => {
   res.json({ status: 'ok' });
