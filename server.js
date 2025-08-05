@@ -28,7 +28,7 @@ app.post('/ask', async (req, res) => {
 
     await sheets.spreadsheets.values.append({
       spreadsheetId: SHEET_ID,
-      range: 'Sheet1!A:B',
+      range: 'Ask2MiQuestions!A:B',
       valueInputOption: 'USER_ENTERED',
       requestBody: {
         values: [[timestamp, question]],
